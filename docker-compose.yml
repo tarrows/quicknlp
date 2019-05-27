@@ -1,0 +1,11 @@
+version: "3.0"
+services:
+  corenlp:
+    image: graham3333/corenlp-complete
+    ports:
+      - '9000:9000'
+  moderator:
+    build:
+      context: './moderator'
+    ports:
+      - '5000:5000'

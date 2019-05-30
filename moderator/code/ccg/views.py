@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Primitive, Rule
+from .serializer import PrimitiveSerializer, RuleSerializer
 
-# Create your views here.
+
+class PrimitiveViewSet(viewsets.ModelViewSet):
+    queryset = Primitive.objects.all()
+    serializer_class = PrimitiveSerializer
+
+
+class RuleViewSet(viewsets.ModelViewSet):
+    queryset = Rule.objects.all()
+    serializer_class = RuleSerializer

@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from ccg.urls import router as ccg_router
+from ccg.views import DerivationView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/derivation', DerivationView.as_view()),
     path('api/', include(ccg_router.urls))
 ]

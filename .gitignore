@@ -4,6 +4,9 @@ public
 
 .env*
 
+work/*
+!.gitkeep
+
 # temporary ignore
 package-lock.json
 yarn.lock
